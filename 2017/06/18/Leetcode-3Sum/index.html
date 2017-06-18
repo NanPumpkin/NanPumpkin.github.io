@@ -5,17 +5,17 @@
   
   <title>Leetcode-3Sum | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLE1234567891011121314151617181920212223242526272829303132public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; threeSum(i">
+  <meta name="description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLEReference:https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20 12345678910111213141516">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode-3Sum">
 <meta property="og:url" content="http://yoursite.com/2017/06/18/Leetcode-3Sum/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLE1234567891011121314151617181920212223242526272829303132public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; threeSum(i">
-<meta property="og:updated_time" content="2017-06-18T16:24:07.000Z">
+<meta property="og:description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLEReference:https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20 12345678910111213141516">
+<meta property="og:updated_time" content="2017-06-18T17:43:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode-3Sum">
-<meta name="twitter:description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLE1234567891011121314151617181920212223242526272829303132public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; threeSum(i">
+<meta name="twitter:description" content="3Sum:https://leetcode.com/problems/3sum/#/descriptionEasiest Way: O(n^3) – 3 levels for loop.TLEReference:https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20 12345678910111213141516">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -90,12 +90,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>3Sum:<br><a href="https://leetcode.com/problems/3sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/3sum/#/description</a><br>Easiest Way: O(n^3) – 3 levels for loop.<br>TLE<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &#123;</div><div class="line">    List&lt;List&lt;Integer&gt;&gt; rst = new ArrayList&lt;&gt;();</div><div class="line">    if (nums == null || nums.length &lt;= 2) &#123;</div><div class="line">        return rst;</div><div class="line">    &#125;</div><div class="line">    Arrays.sort(nums);</div><div class="line">    for (int i = 0; i &lt; nums.length - 2; i++) &#123;</div><div class="line">        //Since their sum is 0, if the first number is larger than 0, the post position cannot satisify the condition.</div><div class="line">        if (nums[i] &gt; 0) &#123;</div><div class="line">            break;</div><div class="line">        &#125;</div><div class="line">        int sum = -nums[i];</div><div class="line">        //Take care of the duplicate case</div><div class="line">        if (i == 0 || (i &gt; 0 &amp;&amp; nums[i] != nums[i - 1])) &#123;</div><div class="line">            int low = i + 1, high = nums.length - 1;</div><div class="line">            while (low &lt; high) &#123;</div><div class="line">                if (nums[low] + nums[high] == sum) &#123;</div><div class="line">                rst.add(Arrays.asList(nums[i], nums[low], nums[high]));</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) low++;</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) high--;</div><div class="line">                low++;</div><div class="line">                high--;</div><div class="line">            &#125; else if (nums[low] + nums[high] &lt; sum) &#123;</div><div class="line">                low++;</div><div class="line">            &#125; else &#123;</div><div class="line">                high--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        &#125;</div><div class="line">        return rst;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Time Complexity: O(nlogn) Space Complexity: O(n)</p>
+        <p>3Sum:<br><a href="https://leetcode.com/problems/3sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/3sum/#/description</a><br>Easiest Way: O(n^3) – 3 levels for loop.<br>TLE<br>Reference:<a href="https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20" target="_blank" rel="external">https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &#123;</div><div class="line">    List&lt;List&lt;Integer&gt;&gt; rst = new ArrayList&lt;&gt;();</div><div class="line">    if (nums == null || nums.length &lt;= 2) &#123;</div><div class="line">        return rst;</div><div class="line">    &#125;</div><div class="line">    Arrays.sort(nums);</div><div class="line">    for (int i = 0; i &lt; nums.length - 2; i++) &#123;</div><div class="line">        //Since their sum is 0, if the first number is larger than 0, the post position cannot satisify the condition.</div><div class="line">        if (nums[i] &gt; 0) &#123;</div><div class="line">            break;</div><div class="line">        &#125;</div><div class="line">        int sum = -nums[i];</div><div class="line">        //Take care of the duplicate case</div><div class="line">        if (i == 0 || (i &gt; 0 &amp;&amp; nums[i] != nums[i - 1])) &#123;</div><div class="line">            int low = i + 1, high = nums.length - 1;</div><div class="line">            while (low &lt; high) &#123;</div><div class="line">                if (nums[low] + nums[high] == sum) &#123;</div><div class="line">                rst.add(Arrays.asList(nums[i], nums[low], nums[high]));</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) low++;</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) high--;</div><div class="line">                low++;</div><div class="line">                high--;</div><div class="line">            &#125; else if (nums[low] + nums[high] &lt; sum) &#123;</div><div class="line">                low++;</div><div class="line">            &#125; else &#123;</div><div class="line">                high--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        &#125;</div><div class="line">        return rst;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Time Complexity: O(n^2) Space Complexity: O(n)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum/" data-id="cj42x9jio000094t5loglszae" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum/" data-id="cj430e9180000dtt5wtlowp5a" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -106,9 +108,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/06/18/Leetcode-3Sum-Closest/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode-3Sum Closest
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/06/18/Leetcode-Add-Two-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title">Leetcode-Add Two Numbers</div>
     </a>
   
@@ -126,7 +137,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -145,7 +156,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -155,9 +166,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-3Sum-Closest/">Leetcode-3Sum Closest</a>
+          </li>
         
           <li>
             <a href="/2017/06/18/Leetcode-3Sum/">Leetcode-3Sum</a>
