@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,81 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Two-Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-Two-Sum/" class="article-date">
+  <time datetime="2017-06-18T15:35:14.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-Two-Sum/">Leetcode-Two Sum</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Two Sum:<br>Java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public int[] twoSum(int[] nums, int target) &#123;</div><div class="line">    HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</div><div class="line">    for (int i = 0; i &lt; nums.length; i++) &#123;</div><div class="line">        if (map.containsKey(nums[i])) &#123;</div><div class="line">            return new int[] &#123;map.get(nums[i]), i&#125;;</div><div class="line">        &#125; else &#123;</div><div class="line">            map.put(target - nums[i], i);</div><div class="line">    &#125;</div><div class="line">    return new int[0];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Time Complexity: O(n), Space Complexity: O(n)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Two-Sum/" data-id="cj42vrgp400006et5t7qfibm1" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-about" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/about/" class="article-date">
+  <time datetime="2017-06-18T14:55:26.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/about/">about</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/about/" data-id="cj42vrgpe00026et54fjpjkvr" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -100,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/17/hello-world/" data-id="cj42tzr3l00012wt5sef9olld" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/17/hello-world/" data-id="cj42vrgpa00016et52ulctia5" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -145,7 +220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/17/test/" data-id="cj42tzr3t00032wt56ohukh9k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/17/test/" data-id="cj42vrgpg00036et52c7673t2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -180,9 +255,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Two-Sum/">Leetcode-Two Sum</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/about/">about</a>
+          </li>
         
           <li>
             <a href="/2017/06/17/hello-world/">Hello World</a>
@@ -205,7 +288,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Nan Xia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
