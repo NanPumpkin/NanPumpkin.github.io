@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leetcode--Word Break | Pumpkin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Word Break IDPhttps://leetcode.com/problems/word-break/#/descriptionReference:http://www.programcreek.com/2012/12/leetcode-solution-word-break/Method 1:Time Complexity O(str.length * dict.size())Initi">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode--Word Break">
+<meta property="og:url" content="http://yoursite.com/2017/06/18/Leetcode-Word-Break/index.html">
+<meta property="og:site_name" content="Pumpkin">
+<meta property="og:description" content="Word Break IDPhttps://leetcode.com/problems/word-break/#/descriptionReference:http://www.programcreek.com/2012/12/leetcode-solution-word-break/Method 1:Time Complexity O(str.length * dict.size())Initi">
+<meta property="og:updated_time" content="2017-06-18T18:59:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode--Word Break">
+<meta name="twitter:description" content="Word Break IDPhttps://leetcode.com/problems/word-break/#/descriptionReference:http://www.programcreek.com/2012/12/leetcode-solution-word-break/Method 1:Time Complexity O(str.length * dict.size())Initi">
+  
+    <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Pumpkin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Start from Zero</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode-Word-Break" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-Word-Break/" class="article-date">
+  <time datetime="2017-06-18T18:02:12.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Leetcode--Word Break
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Word Break I<br>DP<br><a href="https://leetcode.com/problems/word-break/#/description" target="_blank" rel="external">https://leetcode.com/problems/word-break/#/description</a><br>Reference:<a href="http://www.programcreek.com/2012/12/leetcode-solution-word-break/" target="_blank" rel="external">http://www.programcreek.com/2012/12/leetcode-solution-word-break/</a><br>Method 1:<br>Time Complexity O(str.length * dict.size())<br>Initial State: dp[0] = true;<br>l e e t c o d e<br>0 1 2 3 4 5 6 7<br>dp[0] – true<br>i = 0<br>word1: leet length: 4<br>substring: 0 - 4 – leet — existed in the dictionary – dp[4]<br>word2 : code length:4 leet != code<br>i = 1,2,3 dp[i] – false<br>dp[4] – true<br>i = 4<br>word2: code length: 4<br>substring: 4 - 8 – code — existed in the dictionary – dp[8]<br>Final rst: dp[8] – true<br>If the size of the dictionary is very large, the time is bad.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public boolean wordBreak(String s, List&lt;String&gt; wordDict) &#123;</div><div class="line">	//Parse corner case</div><div class="line">	if (s == null || s.length() == 0) &#123;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	boolean[] dp = new boolean[s.length() + 1];</div><div class="line">	for (int i = 0; i &lt; s.length(); i++) &#123;</div><div class="line">		if (!dp[i]) &#123;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		for (String str : wordDict) &#123;</div><div class="line">			int len = str.length();</div><div class="line">			int end = i + len;</div><div class="line">			if (end &gt; s.length()) &#123;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			if (dp[end]) &#123;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			if (s.substring(i, end).equals(a)) &#123;</div><div class="line">				dp[end] = true;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return dp[s.length()];</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Method 2:<br>Time Complexity: O(n^2)<br>dp[i] represents whether s[0….i] can be formed by dictionary<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public boolean wordBreak(String s, List&lt;String&gt; wordDict) &#123;</div><div class="line">	//Parse corner case</div><div class="line">	if (s == null || s.length() == 0) &#123;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	boolean[] dp = new boolean[s.length() + 1];</div><div class="line">	//initial state</div><div class="line">	dp[0] = true;</div><div class="line">	for (int i = 1; i &lt;= s.length(); i++) &#123;</div><div class="line">		//it is likely that the match word will be found at the end of the finished part of the string, so we start from i - 1 instead of begining from the start of the string.</div><div class="line">		for (int j = i - 1; j &gt;= 0; j--) &#123;</div><div class="line">			//test whether substring(j,i) can be segmented into words from the dictionary. </div><div class="line">			String sub = s.substring(j, i);</div><div class="line">			if (wordDict.contains(sub) &amp;&amp; dp[j]) &#123;</div><div class="line">				dp[i] = true;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return dp[s.length()];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Word-Break/" data-id="cj432t2ao0005gvt5gku4q8gs" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/18/Leetcode-3Sum-Closest/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Leetcode-3Sum Closest</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Word-Break/">Leetcode--Word Break</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-3Sum-Closest/">Leetcode-3Sum Closest</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-3Sum/">Leetcode-3Sum</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Add-Two-Numbers/">Leetcode-Add Two Numbers</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Two-Sum/">Leetcode-Two Sum</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Nan Xia<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
