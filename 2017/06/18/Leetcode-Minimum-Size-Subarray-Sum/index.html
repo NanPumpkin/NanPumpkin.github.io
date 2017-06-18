@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Leetcode-3Sum Closest | Pumpkin</title>
+  <title>Leetcode--Minimum Size Subarray Sum | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://leetcode.com/problems/3sum-closest/#/description12345678910111213141516171819202122232425262728293031public int threeSumClosest(int[] nums, int target) &amp;#123;	if (nums == null || nums.length &amp;">
+  <meta name="description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode-3Sum Closest">
-<meta property="og:url" content="http://yoursite.com/2017/06/18/Leetcode-3Sum-Closest/index.html">
+<meta property="og:title" content="Leetcode--Minimum Size Subarray Sum">
+<meta property="og:url" content="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:description" content="https://leetcode.com/problems/3sum-closest/#/description12345678910111213141516171819202122232425262728293031public int threeSumClosest(int[] nums, int target) &amp;#123;	if (nums == null || nums.length &amp;">
-<meta property="og:updated_time" content="2017-06-18T17:51:43.000Z">
+<meta property="og:description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
+<meta property="og:updated_time" content="2017-06-18T21:18:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode-3Sum Closest">
-<meta name="twitter:description" content="https://leetcode.com/problems/3sum-closest/#/description12345678910111213141516171819202122232425262728293031public int threeSumClosest(int[] nums, int target) &amp;#123;	if (nums == null || nums.length &amp;">
+<meta name="twitter:title" content="Leetcode--Minimum Size Subarray Sum">
+<meta name="twitter:description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Leetcode-3Sum-Closest" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-Minimum-Size-Subarray-Sum" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/18/Leetcode-3Sum-Closest/" class="article-date">
-  <time datetime="2017-06-18T17:41:49.000Z" itemprop="datePublished">2017-06-18</time>
+    <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" class="article-date">
+  <time datetime="2017-06-18T20:58:12.000Z" itemprop="datePublished">2017-06-18</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode-3Sum Closest
+      Leetcode--Minimum Size Subarray Sum
     </h1>
   
 
@@ -90,12 +90,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/3sum-closest/#/description" target="_blank" rel="external">https://leetcode.com/problems/3sum-closest/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public int threeSumClosest(int[] nums, int target) &#123;</div><div class="line">	if (nums == null || nums.length &lt;= 2) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;</div><div class="line">	//Sort the input array.</div><div class="line">	Arrays.sort(nums);</div><div class="line">	//Variable to store the final result</div><div class="line">	int min = nums[0] + nums[1] + nums[2];</div><div class="line">	//Run through all indexes of a possible first element.</div><div class="line">	for (int i = 0; i &lt; nums.length - 2; i++) &#123;</div><div class="line">		//skip equal elements to avoid multiple judgement for duplicate cases.</div><div class="line">		if (i == 0 || (nums[i] != nums[i - 1])) &#123;</div><div class="line">			int low = i + 1, high = nums.length - 1;</div><div class="line">			while (low &lt; high) &#123;</div><div class="line">				int sum = nums[i] + nums[low] + nums[high];</div><div class="line">				if (sum == target) &#123;</div><div class="line">					return target;</div><div class="line">				&#125;</div><div class="line">				if (sum &lt; target) &#123;</div><div class="line">					low++;</div><div class="line">				&#125; else &#123;</div><div class="line">					high--;</div><div class="line">				&#125;</div><div class="line">				if (Math.abs(target - sum) &lt; Math.abs(target - min)) &#123;</div><div class="line">					min = sum;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return min;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p><a href="https://leetcode.com/problems/minimum-size-subarray-sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/minimum-size-subarray-sum/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int minSubArrayLen (int s, int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;</div><div class="line">	int i = 0, j = 0, sum = 0, min = Integer.MAX_VALUE;</div><div class="line">	for (; i &lt; nums.length; i++) &#123;</div><div class="line">		sum += nums[i];</div><div class="line">		while (sum &gt;= s) &#123;</div><div class="line">			min = Math.min (min, i - j + 1);</div><div class="line">			sum -= nums[j++];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return min == Integer.MAX_VALUE? 0 : min;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum-Closest/" data-id="cj437rwu10000pyt5dypg4o4a" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" data-id="cj437rwu50001pyt5864a22qv" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -106,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/18/Leetcode-Word-Break/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nieuwer</strong>
-      <div class="article-nav-title">
-        
-          Leetcode--Word Break
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/18/Leetcode-3Sum/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/18/Leetcode-Decode-Ways/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">Leetcode-3Sum</div>
+      <div class="article-nav-title">Leetcode--Decode Ways</div>
     </a>
   
 </nav>
