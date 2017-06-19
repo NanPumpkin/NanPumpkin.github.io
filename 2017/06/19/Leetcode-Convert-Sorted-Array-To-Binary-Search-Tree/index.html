@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leetcode--Convert Sorted Array To Binary Search Tree | Pumpkin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617public TreeNode sortedArrayToBST(int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return null;	&amp;#125;	TreeNode root = buildBST(nums, 0, nums.length - 1);	retur">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode--Convert Sorted Array To Binary Search Tree">
+<meta property="og:url" content="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/index.html">
+<meta property="og:site_name" content="Pumpkin">
+<meta property="og:description" content="1234567891011121314151617public TreeNode sortedArrayToBST(int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return null;	&amp;#125;	TreeNode root = buildBST(nums, 0, nums.length - 1);	retur">
+<meta property="og:updated_time" content="2017-06-19T18:49:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode--Convert Sorted Array To Binary Search Tree">
+<meta name="twitter:description" content="1234567891011121314151617public TreeNode sortedArrayToBST(int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return null;	&amp;#125;	TreeNode root = buildBST(nums, 0, nums.length - 1);	retur">
+  
+    <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Pumpkin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Start from Zero</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" class="article-date">
+  <time datetime="2017-06-19T18:23:05.000Z" itemprop="datePublished">2017-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Leetcode--Convert Sorted Array To Binary Search Tree
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public TreeNode sortedArrayToBST(int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	TreeNode root = buildBST(nums, 0, nums.length - 1);</div><div class="line">	return root;</div><div class="line">&#125;</div><div class="line">public TreeNode buildBST(int[] nums, int start, int end) &#123;</div><div class="line">	if (start &gt;= end) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	int mid = start + (end - start) / 2;</div><div class="line">	TreeNode node = new TreeNode(nums[mid]);</div><div class="line">	node.left = buildBST(nums, start, mid - 1);</div><div class="line">	node.right = buildBST(nums, mid + 1, end);</div><div class="line">	return node;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public TreeNode sortedArrayToBST(int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</div><div class="line">	Stack&lt;Integer&gt; left = new Stack&lt;&gt;();</div><div class="line">	Stack&lt;Integer&gt; right = new Stack&lt;&gt;();</div><div class="line">	stack.push(root);</div><div class="line">	left.push(0);</div><div class="line">	right.push(nums.length - 1);</div><div class="line">	while (!stack.isEmpty()) &#123;</div><div class="line">		TreeNode cur = stack.pop();</div><div class="line">		int l = left.pop();</div><div class="line">		int r = right.pop();</div><div class="line">		int mid = l + (r - l) / 2;</div><div class="line">		cur.val = nums[mid];</div><div class="line">		//[low, middle - 1]</div><div class="line">		if (l &lt;= mid - 1) &#123;</div><div class="line">			cur.left = new TreeNode(0);</div><div class="line">			stack.push(cur.left);</div><div class="line">			left.push(l);</div><div class="line">			right.push(mid - 1);</div><div class="line">		&#125;</div><div class="line">		//[middle + 1, up]</div><div class="line">		if (r &gt;= mid + 1) &#123;</div><div class="line">			cur.right = new TreeNode(0);</div><div class="line">			stack.push(cur.right);</div><div class="line">			left.push(mid + 1);</div><div class="line">			right.push(r);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return root;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" data-id="cj44hylb10001q0t5ahzbwfhl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode--Convert Sorted Linkedlist to Binary Search Tree
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Leetcode--Populating Next Right Pointers in Each Node</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/">Leetcode--Convert Sorted Array To Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/">Leetcode--Populating Next Right Pointers in Each Node</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/">Leetcode--Minimum Size Subarray Sum</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Nan Xia<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
