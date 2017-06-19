@@ -54,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,45 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Sort-Colors" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/19/Leetcode-Sort-Colors/" class="article-date">
+  <time datetime="2017-06-19T19:11:21.000Z" itemprop="datePublished">2017-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/Leetcode-Sort-Colors/">Leetcode-Sort Colors</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/sort-colors/#/description" target="_blank" rel="external">https://leetcode.com/problems/sort-colors/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void sortColors(int[] nums) &#123;</div><div class="line">	int i = 0;</div><div class="line">	int j = nums.length - 1;</div><div class="line">	for (int k = 0; k &lt;= j; k++) &#123;</div><div class="line">		while (nums[k] == 2 &amp;&amp; k &lt; j) &#123;</div><div class="line">			swap(nums, k, j);</div><div class="line">			j--;</div><div class="line">		&#125;</div><div class="line">		while (nums[k] == 0 &amp;&amp; k &gt; i) &#123;</div><div class="line">			swap (nums, i, k);</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj44j31ub000ds7t5cu6uivt4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -91,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj44hylbg0008q0t512vjtknl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj44j31u00005s7t5k9xr0uxm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" data-id="cj44hylb10001q0t5ahzbwfhl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" data-id="cj44j31tw0003s7t5ggovaswj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -167,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" data-id="cj44hylbt000jq0t5859cg9gc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" data-id="cj44j31ug000hs7t57evldk0r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -207,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" data-id="cj44hylbi000aq0t5zos7pefj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" data-id="cj44j31u7000as7t5bxyiqmxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" data-id="cj44hylbo000dq0t5ywku8rsb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" data-id="cj44j31ud000fs7t53mdvraob" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -284,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Decode-Ways/" data-id="cj44hylbd0005q0t5v8zfu0sp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Decode-Ways/" data-id="cj44j31u50008s7t5fbu7zbw0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -324,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Word-Break/" data-id="cj44hylbr000hq0t57yao9h68" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Word-Break/" data-id="cj44j31uk000js7t5a7v8gd1q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -363,7 +402,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum-Closest/" data-id="cj44hylax0000q0t5xvll7eje" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum-Closest/" data-id="cj44j31ty0004s7t579anu6m4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -404,46 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum/" data-id="cj44hylba0004q0t5nzvmap5u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/18/Leetcode-Add-Two-Numbers/" class="article-date">
-  <time datetime="2017-06-18T15:44:25.000Z" itemprop="datePublished">2017-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/18/Leetcode-Add-Two-Numbers/">Leetcode-Add Two Numbers</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Add Two Numbers:<br>Java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">public ListNode addTwoNumbers(ListNode l1, ListNode l2) &#123;</div><div class="line">    ListNode dummy = new ListNode(0);</div><div class="line">    ListNode rst = dummy;</div><div class="line">    int carry = 0;</div><div class="line">    while(l1 != null &amp;&amp; l2 != null) &#123;</div><div class="line">        int sum = (l1.val + l2.val + carry) % 10;</div><div class="line">        carry = (l1.val + l2.val + carry) / 10;</div><div class="line">        ListNode node = new ListNode(sum);</div><div class="line">        dummy.next = node;</div><div class="line">        dummy = dummy.next;</div><div class="line">        l1 = l1.next;</div><div class="line">        l2 = l2.next;</div><div class="line">    &#125;</div><div class="line">    while (l1 != null) &#123;</div><div class="line">        int sum = (l1.val +  carry) % 10;</div><div class="line">        carry = (l1.val +  carry) / 10;</div><div class="line">        dummy.next = new ListNode(sum);</div><div class="line">        dummy = dummy.next;</div><div class="line">        l1 = l1.next;</div><div class="line">    &#125;</div><div class="line">    while (l2 != null) &#123;</div><div class="line">        int sum = (l2.val + carry) % 10;</div><div class="line">        carry = (l2.val + carry) / 10;</div><div class="line">        dummy.next = new ListNode(sum);</div><div class="line">        dummy = dummy.next;</div><div class="line">        l2 = l2.next;</div><div class="line">    &#125;</div><div class="line">    if (carry != 0) &#123;</div><div class="line">        dummy.next = new ListNode(carry);</div><div class="line">        dummy = dummy.next;</div><div class="line">    &#125;</div><div class="line">    dummy.next = null;</div><div class="line">    return rst.next;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Time Complexity: O(n), Space Complexity: O(n)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Add-Two-Numbers/" data-id="cj44hylb80003q0t5kypjs7cs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum/" data-id="cj44j31tn0000s7t5t4588vul" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -488,7 +488,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -498,9 +498,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/19/Leetcode-Sort-Colors/">Leetcode-Sort Colors</a>
+          </li>
         
           <li>
             <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</a>
@@ -516,10 +520,6 @@
         
           <li>
             <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/">Leetcode--Minimum Size Subarray Sum</a>
           </li>
         
       </ul>
