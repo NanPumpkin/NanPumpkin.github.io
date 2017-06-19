@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leetcode--Populating Next Right Pointers in Each Node | Pumpkin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Populating Next Right Pointers in Each Node Ihttps://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/descriptionPerfect binary tree:all leaves are at the same level, and every pare">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode--Populating Next Right Pointers in Each Node">
+<meta property="og:url" content="http://yoursite.com/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/index.html">
+<meta property="og:site_name" content="Pumpkin">
+<meta property="og:description" content="Populating Next Right Pointers in Each Node Ihttps://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/descriptionPerfect binary tree:all leaves are at the same level, and every pare">
+<meta property="og:updated_time" content="2017-06-19T18:14:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode--Populating Next Right Pointers in Each Node">
+<meta name="twitter:description" content="Populating Next Right Pointers in Each Node Ihttps://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/descriptionPerfect binary tree:all leaves are at the same level, and every pare">
+  
+    <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Pumpkin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Start from Zero</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode-Populating-Next-Right-Pointers-in-Each-Node" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" class="article-date">
+  <time datetime="2017-06-19T15:22:06.000Z" itemprop="datePublished">2017-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Leetcode--Populating Next Right Pointers in Each Node
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Populating Next Right Pointers in Each Node I<br><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/description" target="_blank" rel="external">https://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/description</a><br>Perfect binary tree:<br>all leaves are at the same level, and every parent has two children<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void connect(TreeLinkNode root) &#123;</div><div class="line">	if (root == null) &#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	TreeLinkNode cur = root;</div><div class="line">	while (cur != null) &#123;</div><div class="line">		TreeLinkNode next = cur.left;</div><div class="line">		while (cur != null &amp;&amp; cur.left != null) &#123;</div><div class="line">			cur.left.next = cur.right;</div><div class="line">			if (cur.next != null) &#123;</div><div class="line">				cur.right.next = cur.next.left;</div><div class="line">			&#125;</div><div class="line">			cur = cur.next;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Populating Next Right Pointers in Each Node II<br>Keep previous node, head node and current node.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void connect(TreeLinkNode root) &#123;</div><div class="line">	if (root == null) &#123;</div><div class="line">            return;</div><div class="line">    &#125;</div><div class="line">    //the first node of next level</div><div class="line">    TreeLinkNode next = null;</div><div class="line">    //the previous node in the same level</div><div class="line">    TreeLinkNode prev = null;</div><div class="line">    //current node</div><div class="line">    TreeLinkNode cur = root;</div><div class="line">    while (cur != null) &#123;</div><div class="line">    	while (cur != null) &#123;</div><div class="line">    		// left child</div><div class="line">    		if (cur.left != null) &#123;</div><div class="line">    			if (prev != null) &#123;</div><div class="line">    				prev.next = cur.left;</div><div class="line">    			&#125; else &#123;</div><div class="line">    				//the first node of next level.</div><div class="line">    				next = cur.left;</div><div class="line">    			&#125;</div><div class="line">    			prev = cur.left;</div><div class="line">    		&#125;</div><div class="line">    		// right child</div><div class="line">    		if (cur.right != null) &#123;</div><div class="line">    			if (prev != null) &#123;</div><div class="line">    				prev.next = cur.right;</div><div class="line">    			&#125; else &#123;</div><div class="line">    				next = cur.right;</div><div class="line">    			&#125;</div><div class="line">    			prev = cur.right;</div><div class="line">    		&#125;</div><div class="line">    		//parse next node in this level</div><div class="line">    		cur = cur.next;</div><div class="line">    	&#125;</div><div class="line">    	//go to next level</div><div class="line">    	cur = next;</div><div class="line">    	next = null;</div><div class="line">    	prev = null;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Time Complexity: O(n) n is the number of nodes.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" data-id="cj44gtfr80008nrt5gsiq8u0p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Leetcode--Intersection of two Arrayas</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/">Leetcode--Populating Next Right Pointers in Each Node</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/">Leetcode--Minimum Size Subarray Sum</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Decode-Ways/">Leetcode--Decode Ways</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/18/Leetcode-Word-Break/">Leetcode--Word Break</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Nan Xia<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
