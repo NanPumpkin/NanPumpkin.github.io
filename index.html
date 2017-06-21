@@ -54,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,46 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Lowest-Common-Ancestor" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/" class="article-date">
+  <time datetime="2017-06-21T20:20:13.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/">Leetcode-Lowest Common Ancestor</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/#/solutions" target="_blank" rel="external">https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/#/solutions</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) &#123;</div><div class="line">    if(root == null || root == p || root == q)  return root;</div><div class="line">    TreeNode left = lowestCommonAncestor(root.left, p, q);</div><div class="line">    TreeNode right = lowestCommonAncestor(root.right, p, q);</div><div class="line">    if(left != null &amp;&amp; right != null)   return root;</div><div class="line">    return left != null ? left : right;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>BST<br><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/#/description" target="_blank" rel="external">https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) &#123;    </div><div class="line">    if (root.val &gt; p.val &amp;&amp; root.val &gt; q.val) &#123;</div><div class="line">        return lowestCommonAncestor(root.left, p, q);</div><div class="line">    &#125;</div><div class="line">    else if (root.val &lt; p.val &amp;&amp; root.val &lt; q.val) &#123;</div><div class="line">        return lowestCommonAncestor(root.right, p, q);</div><div class="line">    &#125; else &#123;</div><div class="line">        return root;</div><div class="line">    &#125;   </div><div class="line">&#125;</div><div class="line">public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) &#123;</div><div class="line">    TreeNode cur = root;</div><div class="line">    while (true) &#123;</div><div class="line">        if (cur.val &gt; p.val &amp;&amp; cur.val &gt; q.val) &#123;</div><div class="line">            cur = cur.left;</div><div class="line">        &#125;</div><div class="line">        else if (cur.val &lt; p.val &amp;&amp; cur.val &lt; q.val) &#123;</div><div class="line">            cur = cur.right;</div><div class="line">        &#125; else &#123;</div><div class="line">            return cur;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Lowest-Common-Ancestor/" data-id="cj47g3sut000neht51lce9s63" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Leetcode-Unique-Paths" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -87,13 +127,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><a href="https://leetcode.com/problems/unique-paths/#/description" target="_blank" rel="external">https://leetcode.com/problems/unique-paths/#/description</a><br>Unique Paths I<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public int uniquePaths(int m, int n) &#123;</div><div class="line">   int[][] dp = new int[m][n];</div><div class="line">   for (int i = 0; i &lt; m; i++) &#123;</div><div class="line">       for (int j = 0; j &lt; n; j++) &#123;</div><div class="line">           if (i == 0 || j == 0) &#123;</div><div class="line">               dp[i][j] = 1;</div><div class="line">           &#125; else &#123;</div><div class="line">               dp[i][j] = dp[i - 1][j] + dp[i][j - 1];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   return dp[m - 1][n - 1];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Unique Path II<br><a href="https://discuss.leetcode.com/topic/10974/short-java-solution/7" target="_blank" rel="external">https://discuss.leetcode.com/topic/10974/short-java-solution/7</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public int uniquePathsWithObstacles(int[][] obstacleGrid) &#123;</div><div class="line">    int width = obstacleGrid[0].length;</div><div class="line">    int[] dp = new int[width];</div><div class="line">    dp[0] = 1;</div><div class="line">    for (int[] row : obstacleGrid) &#123;</div><div class="line">        for (int j = 0; j &lt; width; j++) &#123;</div><div class="line">            if (row[j] == 1)</div><div class="line">                dp[j] = 0;</div><div class="line">            else if (j &gt; 0)</div><div class="line">                dp[j] += dp[j - 1];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return dp[width - 1];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47fx9ex000vdxt5r0xom2mg" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47g3svg0011eht5mk3dinxc" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
     </footer>
   </div>
   
@@ -128,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Longest-Palindrome-in-String/" data-id="cj47fx9ef000hdxt5d25diu5v" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Longest-Palindrome-in-String/" data-id="cj47g3sus000leht5lqy4ynl3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -167,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" data-id="cj47fx9dl0001dxt5z9pr0udn" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" data-id="cj47g3su50004eht5xycsqr7k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -206,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj47fx9ez000xdxt53lxfevsy" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj47g3svd000xeht56xzgvnsl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -244,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj47fx9ea000ddxt5yu3h67p3" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj47g3suj000deht5f0w87ejo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -284,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" data-id="cj47fx9eu000rdxt5n2yzu5gj" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" data-id="cj47g3sv3000teht54d5d54h1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -325,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj47fx9dz0005dxt5nwlb1cpi" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj47g3su90005eht53y0p47lz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -364,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" data-id="cj47fx9e30008dxt59kspkkj4" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" data-id="cj47g3suc0008eht5dd0c2ylc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -403,46 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj47fx9eq000pdxt5a9jtr1w8" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" class="article-date">
-  <time datetime="2017-06-19T18:23:35.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise" target="_blank" rel="external">https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public TreeNode sortedListToBST(ListNode head) &#123;</div><div class="line">	if (head == null) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	return toBST(head, null);</div><div class="line">&#125;</div><div class="line">public TreeNode toBST(ListNode head, ListNode tail) &#123;</div><div class="line">	ListNode slow = head;</div><div class="line">	ListNode fast = head;</div><div class="line">	if (head == tail) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	while (fast != tail &amp;&amp; fast.next != tail) &#123;</div><div class="line">		fast = fast.next.next;</div><div class="line">		slow = slow.next;</div><div class="line">	&#125;</div><div class="line">	TreeNode thead = new TreeNode (slow.val);</div><div class="line">	thead.left = toBST(head, slow);</div><div class="line">	thead.right = toBST(slow.next, tail);</div><div class="line">	return thead;</div><div class="line">&#125;</div></pre></td></tr></table></figure> </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj47fx9ej000ldxt5ttckuz7q" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj47g3sv7000veht5wja33fdp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -468,7 +473,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -487,7 +492,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -497,9 +502,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/">Leetcode-Lowest Common Ancestor</a>
+          </li>
         
           <li>
             <a href="/2017/06/21/Leetcode-Unique-Paths/">Leetcode-Unique Paths</a>
@@ -515,10 +524,6 @@
         
           <li>
             <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
           </li>
         
       </ul>

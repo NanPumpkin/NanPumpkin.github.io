@@ -5,13 +5,17 @@
   
   <title>Leetcode-Unique Paths | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="https://leetcode.com/problems/unique-paths/#/descriptionUnique Paths I12345678910111213public int uniquePaths(int m, int n) &amp;#123;   int[][] dp = new int[m][n];   for (int i = 0; i &amp;lt; m; i++) &amp;#123;">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode-Unique Paths">
 <meta property="og:url" content="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:updated_time" content="2017-06-21T20:03:24.000Z">
+<meta property="og:description" content="https://leetcode.com/problems/unique-paths/#/descriptionUnique Paths I12345678910111213public int uniquePaths(int m, int n) &amp;#123;   int[][] dp = new int[m][n];   for (int i = 0; i &amp;lt; m; i++) &amp;#123;">
+<meta property="og:updated_time" content="2017-06-21T20:19:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode-Unique Paths">
+<meta name="twitter:description" content="https://leetcode.com/problems/unique-paths/#/descriptionUnique Paths I12345678910111213public int uniquePaths(int m, int n) &amp;#123;   int[][] dp = new int[m][n];   for (int i = 0; i &amp;lt; m; i++) &amp;#123;">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -55,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -86,22 +90,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><a href="https://leetcode.com/problems/unique-paths/#/description" target="_blank" rel="external">https://leetcode.com/problems/unique-paths/#/description</a><br>Unique Paths I<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public int uniquePaths(int m, int n) &#123;</div><div class="line">   int[][] dp = new int[m][n];</div><div class="line">   for (int i = 0; i &lt; m; i++) &#123;</div><div class="line">       for (int j = 0; j &lt; n; j++) &#123;</div><div class="line">           if (i == 0 || j == 0) &#123;</div><div class="line">               dp[i][j] = 1;</div><div class="line">           &#125; else &#123;</div><div class="line">               dp[i][j] = dp[i - 1][j] + dp[i][j - 1];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   return dp[m - 1][n - 1];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Unique Path II<br><a href="https://discuss.leetcode.com/topic/10974/short-java-solution/7" target="_blank" rel="external">https://discuss.leetcode.com/topic/10974/short-java-solution/7</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public int uniquePathsWithObstacles(int[][] obstacleGrid) &#123;</div><div class="line">    int width = obstacleGrid[0].length;</div><div class="line">    int[] dp = new int[width];</div><div class="line">    dp[0] = 1;</div><div class="line">    for (int[] row : obstacleGrid) &#123;</div><div class="line">        for (int j = 0; j &lt; width; j++) &#123;</div><div class="line">            if (row[j] == 1)</div><div class="line">                dp[j] = 0;</div><div class="line">            else if (j &gt; 0)</div><div class="line">                dp[j] += dp[j - 1];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return dp[width - 1];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47fx9ex000vdxt5r0xom2mg" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47g3svg0011eht5mk3dinxc" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
+    <a href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode-Lowest Common Ancestor
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/06/21/Leetcode-Longest-Palindrome-in-String/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Leetcode-Longest Palindrome in String</div>
     </a>
   
@@ -119,7 +136,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -138,7 +155,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -148,9 +165,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/">Leetcode-Lowest Common Ancestor</a>
+          </li>
         
           <li>
             <a href="/2017/06/21/Leetcode-Unique-Paths/">Leetcode-Unique Paths</a>
@@ -166,10 +187,6 @@
         
           <li>
             <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
           </li>
         
       </ul>
