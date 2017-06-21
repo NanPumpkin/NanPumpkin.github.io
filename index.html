@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,120 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Unique-Paths" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Unique-Paths/" class="article-date">
+  <time datetime="2017-06-21T20:03:24.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Unique-Paths/">Leetcode-Unique Paths</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47fx9ex000vdxt5r0xom2mg" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Longest-Palindrome-in-String" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Longest-Palindrome-in-String/" class="article-date">
+  <time datetime="2017-06-21T19:56:39.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Longest-Palindrome-in-String/">Leetcode-Longest Palindrome in String</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://discuss.leetcode.com/topic/35582/java-easy-understanding-solution-beats-97/3" target="_blank" rel="external">https://discuss.leetcode.com/topic/35582/java-easy-understanding-solution-beats-97/3</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">public String longestPalindrome(String s) &#123;</div><div class="line">    char[] ca = s.toCharArray();</div><div class="line">    int rs = 0, re = 0;</div><div class="line">    int max = 0;</div><div class="line">    for(int i = 0; i &lt; ca.length; i++) &#123;</div><div class="line">        if(isPalindrome(ca, i - max - 1, i)) &#123;</div><div class="line">            rs = i - max - 1; re = i;</div><div class="line">            max += 2;</div><div class="line">        &#125; else if(isPalindrome(ca, i - max, i)) &#123;</div><div class="line">            rs = i - max; re = i;</div><div class="line">            max += 1;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return s.substring(rs, re + 1);</div><div class="line">    </div><div class="line">&#125;</div><div class="line">public boolean isPalindrome (int i, int j, String s) &#123;</div><div class="line">    if (i &gt; j || i &lt; 0 || j &gt;= s.length()) &#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    while (i &lt; j) &#123;</div><div class="line">        if (s.charAt(i) != s.charAt(j)) &#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        i++;</div><div class="line">        j--;</div><div class="line">    &#125;</div><div class="line">    return true;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Longest-Palindrome-in-String/" data-id="cj47fx9ef000hdxt5d25diu5v" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Add-and-Search-Word-Data-Structure-Design" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" class="article-date">
+  <time datetime="2017-06-21T15:04:05.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/">Leetcode-Add and Search Word-Data Structure Design</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/add-and-search-word-data-structure-design/#/description" target="_blank" rel="external">https://leetcode.com/problems/add-and-search-word-data-structure-design/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">public class WordDictionary &#123;</div><div class="line">	class TrieNode &#123;</div><div class="line">		char c;</div><div class="line">		boolean isEnd;</div><div class="line">		TrieNode[] child;</div><div class="line">		TrieNode (char c, boolean isEnd) &#123; </div><div class="line">			this.c = c;</div><div class="line">			this.isEnd = isEnd;</div><div class="line">			this.child = new TrieNode[26];</div><div class="line">		&#125;</div><div class="line">		TrieNode (char c) &#123;	</div><div class="line">			this.c = c;</div><div class="line">			this.child = new TrieNode[26];</div><div class="line">		&#125;</div><div class="line">		TrieNode () &#123;</div><div class="line">			this.child = new TrieNode[26];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	TrieNode root;</div><div class="line">	public WordDictionary() &#123;</div><div class="line">		root = new TrieNode();</div><div class="line">	&#125;</div><div class="line">	public void addWord (String word) &#123;</div><div class="line">		TrieNode cur = root;</div><div class="line">		for (char c : word.toCharArray()) &#123;</div><div class="line">			int index = c - &apos;a&apos;;</div><div class="line">			if (cur.child[index] == null) &#123;	</div><div class="line">				cur.child[index] = new TrieNode(c);</div><div class="line">			&#125;</div><div class="line">			cur = cur.child[index];</div><div class="line">		&#125;</div><div class="line">		cur.isEnd = true;</div><div class="line">	&#125;</div><div class="line">	public boolean search (String word) &#123;</div><div class="line">		TrieNode cur = root;</div><div class="line">		return dfs(word, 0, cur);</div><div class="line">	&#125;</div><div class="line">	private boolean dfs (String word, int index, TrieNode cur) &#123; </div><div class="line">		if (index == word.length()) &#123;</div><div class="line">			if (cur.isEnd) return true;</div><div class="line">			return false;</div><div class="line">		&#125;</div><div class="line">		char c = word.charAt(index);</div><div class="line">		int point = c - &apos;a&apos;;</div><div class="line">		if (c == &apos;.&apos;) &#123; </div><div class="line">			for (int i = 0; i &lt; 26; i++) &#123;	</div><div class="line">				if (cur.child[i] != null) &#123;	</div><div class="line">					if (dfs(word, index + 1, cur.child[i])) &#123; </div><div class="line">						return true;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125; else &#123;	</div><div class="line">			if (cur.child[point] == null) &#123;	</div><div class="line">				return false;</div><div class="line">			&#125; else &#123;	</div><div class="line">				return dfs (word, index + 1, cur.child[point]);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" data-id="cj47fx9dl0001dxt5z9pr0udn" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Leetcode-Sparse-Matrix-Multiplication" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -92,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj46dmpgs000x71vzjgkbqhsy" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj47fx9ez000xdxt53lxfevsy" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -130,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj46dmpgj000r71vzkqej4fmj" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj47fx9ea000ddxt5yu3h67p3" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -170,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" data-id="cj46dmpg4000l71vz3bifdei1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" data-id="cj47fx9eu000rdxt5n2yzu5gj" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -211,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj46dmpfm000a71vzgms60vu5" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj47fx9dz0005dxt5nwlb1cpi" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -250,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" data-id="cj46dmpfa000571vzjraj06wi" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" data-id="cj47fx9e30008dxt59kspkkj4" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -289,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj46dmpg9000n71vzhlazszr8" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj47fx9eq000pdxt5a9jtr1w8" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -328,127 +442,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj46dmpf6000471vzf5lfjnd6" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj47fx9ej000ldxt5ttckuz7q" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" class="article-date">
-  <time datetime="2017-06-19T18:23:05.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/">Leetcode--Convert Sorted Array To Binary Search Tree</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public TreeNode sortedArrayToBST(int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	TreeNode root = buildBST(nums, 0, nums.length - 1);</div><div class="line">	return root;</div><div class="line">&#125;</div><div class="line">public TreeNode buildBST(int[] nums, int start, int end) &#123;</div><div class="line">	if (start &gt;= end) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	int mid = start + (end - start) / 2;</div><div class="line">	TreeNode node = new TreeNode(nums[mid]);</div><div class="line">	node.left = buildBST(nums, start, mid - 1);</div><div class="line">	node.right = buildBST(nums, mid + 1, end);</div><div class="line">	return node;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public TreeNode sortedArrayToBST(int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</div><div class="line">	Stack&lt;Integer&gt; left = new Stack&lt;&gt;();</div><div class="line">	Stack&lt;Integer&gt; right = new Stack&lt;&gt;();</div><div class="line">	stack.push(root);</div><div class="line">	left.push(0);</div><div class="line">	right.push(nums.length - 1);</div><div class="line">	while (!stack.isEmpty()) &#123;</div><div class="line">		TreeNode cur = stack.pop();</div><div class="line">		int l = left.pop();</div><div class="line">		int r = right.pop();</div><div class="line">		int mid = l + (r - l) / 2;</div><div class="line">		cur.val = nums[mid];</div><div class="line">		//[low, middle - 1]</div><div class="line">		if (l &lt;= mid - 1) &#123;</div><div class="line">			cur.left = new TreeNode(0);</div><div class="line">			stack.push(cur.left);</div><div class="line">			left.push(l);</div><div class="line">			right.push(mid - 1);</div><div class="line">		&#125;</div><div class="line">		//[middle + 1, up]</div><div class="line">		if (r &gt;= mid + 1) &#123;</div><div class="line">			cur.right = new TreeNode(0);</div><div class="line">			stack.push(cur.right);</div><div class="line">			left.push(mid + 1);</div><div class="line">			right.push(r);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return root;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" data-id="cj46dmpfi000871vzxyak7hfc" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Populating-Next-Right-Pointers-in-Each-Node" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" class="article-date">
-  <time datetime="2017-06-19T15:22:06.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/">Leetcode--Populating Next Right Pointers in Each Node</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Populating Next Right Pointers in Each Node I<br><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/description" target="_blank" rel="external">https://leetcode.com/problems/populating-next-right-pointers-in-each-node/#/description</a><br>Perfect binary tree:<br>all leaves are at the same level, and every parent has two children<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void connect(TreeLinkNode root) &#123;</div><div class="line">	if (root == null) &#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	TreeLinkNode cur = root;</div><div class="line">	while (cur != null) &#123;</div><div class="line">		TreeLinkNode next = cur.left;</div><div class="line">		while (cur != null &amp;&amp; cur.left != null) &#123;</div><div class="line">			cur.left.next = cur.right;</div><div class="line">			if (cur.next != null) &#123;</div><div class="line">				cur.right.next = cur.next.left;</div><div class="line">			&#125;</div><div class="line">			cur = cur.next;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Populating Next Right Pointers in Each Node II<br>Keep previous node, head node and current node.<br><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/#/solutions" target="_blank" rel="external">https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/#/solutions</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void connect(TreeLinkNode root) &#123;</div><div class="line">	if (root == null) &#123;</div><div class="line">            return;</div><div class="line">    &#125;</div><div class="line">    //the first node of next level</div><div class="line">    TreeLinkNode next = null;</div><div class="line">    //the previous node in the same level</div><div class="line">    TreeLinkNode prev = null;</div><div class="line">    //current node</div><div class="line">    TreeLinkNode cur = root;</div><div class="line">    while (cur != null) &#123;</div><div class="line">    	while (cur != null) &#123;</div><div class="line">    		// left child</div><div class="line">    		if (cur.left != null) &#123;</div><div class="line">    			if (prev != null) &#123;</div><div class="line">    				prev.next = cur.left;</div><div class="line">    			&#125; else &#123;</div><div class="line">    				//the first node of next level.</div><div class="line">    				next = cur.left;</div><div class="line">    			&#125;</div><div class="line">    			prev = cur.left;</div><div class="line">    		&#125;</div><div class="line">    		// right child</div><div class="line">    		if (cur.right != null) &#123;</div><div class="line">    			if (prev != null) &#123;</div><div class="line">    				prev.next = cur.right;</div><div class="line">    			&#125; else &#123;</div><div class="line">    				next = cur.right;</div><div class="line">    			&#125;</div><div class="line">    			prev = cur.right;</div><div class="line">    		&#125;</div><div class="line">    		//parse next node in this level</div><div class="line">    		cur = cur.next;</div><div class="line">    	&#125;</div><div class="line">    	//go to next level</div><div class="line">    	cur = next;</div><div class="line">    	next = null;</div><div class="line">    	prev = null;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Time Complexity: O(n) n is the number of nodes. O(1) space complexity</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/" data-id="cj46dmpg0000h71vz9leb6nlu" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Intersection-of-two-Arrayas" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" class="article-date">
-  <time datetime="2017-06-18T21:25:50.000Z" itemprop="datePublished">2017-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/intersection-of-two-arrays-ii/#/solutions" target="_blank" rel="external">https://leetcode.com/problems/intersection-of-two-arrays-ii/#/solutions</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public int[] intersect(int[] nums1, int[] nums2) &#123;</div><div class="line">    HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</div><div class="line">    for (int i = 0; i &lt; nums1.length; i++) &#123;</div><div class="line">        if (!map.containsKey(nums1[i])) &#123;</div><div class="line">            map.put(nums1[i], 0);</div><div class="line">        &#125; </div><div class="line">        map.put(nums1[i], map.get(nums1[i]) + 1);</div><div class="line">    &#125;</div><div class="line">    List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</div><div class="line">    for (int i = 0; i &lt; nums2.length; i++) &#123;</div><div class="line">        if (map.containsKey(nums2[i]) &amp;&amp; map.get(nums2[i]) != 0) &#123;</div><div class="line">            list.add(nums2[i]);</div><div class="line">            map.put(nums2[i], map.get(nums2[i]) - 1);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    int[] ans = new int[list.size()];</div><div class="line">    for(int i = 0; i &lt; ans.length; i++) &#123;</div><div class="line">        ans[i] = list.get(i);</div><div class="line">    &#125;</div><div class="line">    return ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Reference:<a href="https://discuss.leetcode.com/topic/45992/solution-to-3rd-follow-up-question/2" target="_blank" rel="external">https://discuss.leetcode.com/topic/45992/solution-to-3rd-follow-up-question/2</a><br>What if elements of nums2 are stored on disk, and the memory is<br>limited such that you cannot load all elements into the memory at<br>once?<br>If only nums2 cannot fit in memory, put all elements of nums1 into a HashMap, read chunks of array that fit into the memory, and record the intersections.</p>
-<p>If both nums1 and nums2 are so huge that neither fit into the memory, sort them individually (external sort), then read 2 elements from each array at a time in memory, record intersections.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" data-id="cj46dmpg1000j71vz15gf8042" class="article-share-link">Partager</a>
-      
-      
     </footer>
   </div>
   
@@ -459,7 +457,7 @@
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -470,7 +468,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -480,7 +478,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
     </div>
@@ -489,7 +487,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -499,9 +497,21 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Unique-Paths/">Leetcode-Unique Paths</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Longest-Palindrome-in-String/">Leetcode-Longest Palindrome in String</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/">Leetcode-Add and Search Word-Data Structure Design</a>
+          </li>
         
           <li>
             <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
@@ -509,18 +519,6 @@
         
           <li>
             <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/">Leetcode-Search in Rotated Sorted Array</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/">Leetcode-Best Time to Buy and Sell Stock</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/">Leetcode-Binary Tree Vertical Order traversal</a>
           </li>
         
       </ul>
@@ -536,7 +534,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Nan Xia<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
