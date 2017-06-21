@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,205 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Minimum-Size-Subarray-Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" class="article-date">
+  <time datetime="2017-06-18T20:58:12.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/">Leetcode--Minimum Size Subarray Sum</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/minimum-size-subarray-sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/minimum-size-subarray-sum/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int minSubArrayLen (int s, int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;</div><div class="line">	int i = 0, j = 0, sum = 0, min = Integer.MAX_VALUE;</div><div class="line">	for (; i &lt; nums.length; i++) &#123;</div><div class="line">		sum += nums[i];</div><div class="line">		while (sum &gt;= s) &#123;</div><div class="line">			min = Math.min (min, i - j + 1);</div><div class="line">			sum -= nums[j++];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return min == Integer.MAX_VALUE? 0 : min;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Rectangle in matrix? </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" data-id="cj46dmpfw000f71vzsgu4ff0g" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Decode-Ways" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-Decode-Ways/" class="article-date">
+  <time datetime="2017-06-18T20:38:16.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-Decode-Ways/">Leetcode--Decode Ways</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Decode Ways<br><a href="https://leetcode.com/problems/decode-ways/#/description" target="_blank" rel="external">https://leetcode.com/problems/decode-ways/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public int numDecodings(String s) &#123;</div><div class="line">    if (s == null || s.length() == 0) &#123;</div><div class="line">    	return 0;</div><div class="line">	&#125;</div><div class="line">	int[] dp = new int[s.length() + 1];</div><div class="line">	dp[0] = 1;</div><div class="line">	dp[1] = s.charAt(0) == &apos;0&apos; ? 0 : 1;</div><div class="line">	for (int i = 2; i &lt;= s.length(); i++) &#123;</div><div class="line">		dp[i] = dp[i - 1];</div><div class="line">		if (s.charAt(i - 1) == &apos;0&apos;) &#123;</div><div class="line">			dp[i] = 0;</div><div class="line">		&#125;</div><div class="line">		if ((s.charAt(i - 2) == &apos;2&apos; &amp;&amp; s.charAt(i - 1) &lt;= &apos;6&apos;) || (s.charAt(i - 2) == &apos;1&apos;)) &#123;</div><div class="line">			dp[i] += dp[i - 2];</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	return dp[s.length()];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Decode-Ways/" data-id="cj46dmpfs000d71vzop1i7hd6" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Word-Break" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-Word-Break/" class="article-date">
+  <time datetime="2017-06-18T18:02:12.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-Word-Break/">Leetcode--Word Break</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Word Break I<br>DP<br><a href="https://leetcode.com/problems/word-break/#/description" target="_blank" rel="external">https://leetcode.com/problems/word-break/#/description</a><br>Reference:<a href="http://www.programcreek.com/2012/12/leetcode-solution-word-break/" target="_blank" rel="external">http://www.programcreek.com/2012/12/leetcode-solution-word-break/</a><br>Method 1:<br>Time Complexity O(str.length * dict.size())<br>Initial State: dp[0] = true;<br>l e e t c o d e<br>0 1 2 3 4 5 6 7<br>dp[0] – true<br>i = 0<br>word1: leet length: 4<br>substring: 0 - 4 – leet — existed in the dictionary – dp[4]<br>word2 : code length:4 leet != code<br>i = 1,2,3 dp[i] – false<br>dp[4] – true<br>i = 4<br>word2: code length: 4<br>substring: 4 - 8 – code — existed in the dictionary – dp[8]<br>Final rst: dp[8] – true<br>If the size of the dictionary is very large, the time is bad.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public boolean wordBreak(String s, List&lt;String&gt; wordDict) &#123;</div><div class="line">	//Parse corner case</div><div class="line">	if (s == null || s.length() == 0) &#123;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	boolean[] dp = new boolean[s.length() + 1];</div><div class="line">	for (int i = 0; i &lt; s.length(); i++) &#123;</div><div class="line">		if (!dp[i]) &#123;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		for (String str : wordDict) &#123;</div><div class="line">			int len = str.length();</div><div class="line">			int end = i + len;</div><div class="line">			if (end &gt; s.length()) &#123;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			if (dp[end]) &#123;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			if (s.substring(i, end).equals(a)) &#123;</div><div class="line">				dp[end] = true;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return dp[s.length()];</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Method 2:<br>Time Complexity: O(n^2)<br>dp[i] represents whether s[0….i] can be formed by dictionary<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public boolean wordBreak(String s, List&lt;String&gt; wordDict) &#123;</div><div class="line">	//Parse corner case</div><div class="line">	if (s == null || s.length() == 0) &#123;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	boolean[] dp = new boolean[s.length() + 1];</div><div class="line">	//initial state</div><div class="line">	dp[0] = true;</div><div class="line">	for (int i = 1; i &lt;= s.length(); i++) &#123;</div><div class="line">		//it is likely that the match word will be found at the end of the finished part of the string, so we start from i - 1 instead of begining from the start of the string.</div><div class="line">		for (int j = i - 1; j &gt;= 0; j--) &#123;</div><div class="line">			//test whether substring(j,i) can be segmented into words from the dictionary. </div><div class="line">			String sub = s.substring(j, i);</div><div class="line">			if (wordDict.contains(sub) &amp;&amp; dp[j]) &#123;</div><div class="line">				dp[i] = true;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return dp[s.length()];</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>Word Break II<br>Reference: <a href="http://www.programcreek.com/2014/03/leetcode-word-break-ii-java/" target="_blank" rel="external">http://www.programcreek.com/2014/03/leetcode-word-break-ii-java/</a><br>dfs and memorize intermediate result for each substring<br>Example: catsanddog<br>rst : [“cat sand dog”,]<br>i = 1 c<br>i = 2 ca<br>i = 3 cat — sanddog rst : [“cat sand dog”]<br>        i1 = 1 s<br>        i1 = 2 sa<br>        i1 = 3 san<br>        i1 = 4 sand — dog rst: [“sand dog”]<br>                ii1 = 1 d<br>                ii2 = 2 do<br>                ii3 = 3 dog<br>                rst : [“dog”]<br>i = 4 cats – anddog rst: [“cats and dog”]<br>        i2 = 1 a<br>        i2 = 2 an<br>        i2 = 3 and – dog rst: [“and dog”]<br>                map contains,return dog directly<br>i = 5 catsa<br>i = 6 catsan<br>i = 7 catsand<br>i = 8 catsandd<br>i = 9 catsanddo<br>i = 10 catsanddog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">//store intermediate </div><div class="line">Map&lt;String, List&lt;String&gt;&gt; map = new HashMap&lt;&gt;();</div><div class="line">public List&lt;String&gt; wordBreak (String s, List&lt;String&gt; dict) &#123;</div><div class="line">	return dfs(s,wordDict);</div><div class="line">&#125;</div><div class="line">private List&lt;String&gt; dfs (String s, List&lt;String&gt; dict) &#123;</div><div class="line">	if (map.containsKey(s)) &#123;</div><div class="line">		return map.get(s);</div><div class="line">	&#125;</div><div class="line">	List&lt;String&gt; rst = new ArrayList&lt;&gt;();</div><div class="line">	int n = s.length();</div><div class="line">	//completing running through the word</div><div class="line">	if (n == 0) &#123;</div><div class="line">		return rst;</div><div class="line">	&#125;	</div><div class="line">	for (int i = 1; i &lt;= n; i++) &#123;</div><div class="line">		String sub = s.substring(0, i);</div><div class="line">		if (dict.contains(sub)) &#123;</div><div class="line">			if (i == n) &#123;</div><div class="line">				rst.add(sub);</div><div class="line">			&#125; else &#123;</div><div class="line">				String next = s.substring(i);</div><div class="line">				List&lt;String&gt; temp = dfs (next, dict);</div><div class="line">				for (String item : temp) &#123;</div><div class="line">					item = sub + &quot; &quot; + item;</div><div class="line">					rst.add(item);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	map.put(s, rst);</div><div class="line">	return rst;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Word-Break/" data-id="cj46dmpgp000v71vzmsnfhtgo" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-3Sum-Closest" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-3Sum-Closest/" class="article-date">
+  <time datetime="2017-06-18T17:41:49.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-3Sum-Closest/">Leetcode-3Sum Closest</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/3sum-closest/#/description" target="_blank" rel="external">https://leetcode.com/problems/3sum-closest/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public int threeSumClosest(int[] nums, int target) &#123;</div><div class="line">	if (nums == null || nums.length &lt;= 2) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;</div><div class="line">	//Sort the input array.</div><div class="line">	Arrays.sort(nums);</div><div class="line">	//Variable to store the final result</div><div class="line">	int min = nums[0] + nums[1] + nums[2];</div><div class="line">	//Run through all indexes of a possible first element.</div><div class="line">	for (int i = 0; i &lt; nums.length - 2; i++) &#123;</div><div class="line">		//skip equal elements to avoid multiple judgement for duplicate cases.</div><div class="line">		if (i == 0 || (nums[i] != nums[i - 1])) &#123;</div><div class="line">			int low = i + 1, high = nums.length - 1;</div><div class="line">			while (low &lt; high) &#123;</div><div class="line">				int sum = nums[i] + nums[low] + nums[high];</div><div class="line">				if (sum == target) &#123;</div><div class="line">					return target;</div><div class="line">				&#125;</div><div class="line">				if (sum &lt; target) &#123;</div><div class="line">					low++;</div><div class="line">				&#125; else &#123;</div><div class="line">					high--;</div><div class="line">				&#125;</div><div class="line">				if (Math.abs(target - sum) &lt; Math.abs(target - min)) &#123;</div><div class="line">					min = sum;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return min;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum-Closest/" data-id="cj46dmpes000071vzvg0km75g" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-3Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/Leetcode-3Sum/" class="article-date">
+  <time datetime="2017-06-18T16:03:55.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/Leetcode-3Sum/">Leetcode-3Sum</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>3Sum:<br><a href="https://leetcode.com/problems/3sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/3sum/#/description</a><br>Easiest Way: O(n^3) – 3 levels for loop.<br>TLE<br>Reference:<a href="https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20" target="_blank" rel="external">https://discuss.leetcode.com/topic/8125/concise-o-n-2-java-solution/20</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &#123;</div><div class="line">    List&lt;List&lt;Integer&gt;&gt; rst = new ArrayList&lt;&gt;();</div><div class="line">    if (nums == null || nums.length &lt;= 2) &#123;</div><div class="line">        return rst;</div><div class="line">    &#125;</div><div class="line">    Arrays.sort(nums);</div><div class="line">    for (int i = 0; i &lt; nums.length - 2; i++) &#123;</div><div class="line">        //Since their sum is 0, if the first number is larger than 0, the post position cannot satisify the condition.</div><div class="line">        if (nums[i] &gt; 0) &#123;</div><div class="line">            break;</div><div class="line">        &#125;</div><div class="line">        int sum = -nums[i];</div><div class="line">        //Take care of the duplicate case</div><div class="line">        if (i == 0 || (i &gt; 0 &amp;&amp; nums[i] != nums[i - 1])) &#123;</div><div class="line">            int low = i + 1, high = nums.length - 1;</div><div class="line">            while (low &lt; high) &#123;</div><div class="line">                if (nums[low] + nums[high] == sum) &#123;</div><div class="line">                rst.add(Arrays.asList(nums[i], nums[low], nums[high]));</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) low++;</div><div class="line">                while (low &lt; high &amp;&amp; nums[low] == nums[high]) high--;</div><div class="line">                low++;</div><div class="line">                high--;</div><div class="line">            &#125; else if (nums[low] + nums[high] &lt; sum) &#123;</div><div class="line">                low++;</div><div class="line">            &#125; else &#123;</div><div class="line">                high--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        &#125;</div><div class="line">        return rst;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Time Complexity: O(n^2) Space Complexity: O(n)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-3Sum/" data-id="cj46dmpf4000371vzwsmsvxa2" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Leetcode-Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -92,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Add-Two-Numbers/" data-id="cj44j31tr0001s7t5gztvtbcx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Add-Two-Numbers/" data-id="cj46dmpew000171vzxl1shgdy" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -133,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Two-Sum/" data-id="cj44j31um000ls7t5s2613n3g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Two-Sum/" data-id="cj46dmpgd000p71vzaspxtm1d" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -171,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/about/" data-id="cj44j31uy000ps7t5sjzkq4ga" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/18/about/" data-id="cj46dmpgm000t71vzffxw3r6r" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -195,7 +394,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -205,7 +404,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
     </div>
@@ -214,7 +413,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -224,28 +423,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Sort-Colors/">Leetcode-Sort Colors</a>
+            <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</a>
+            <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/">Leetcode--Convert Sorted Array To Binary Search Tree</a>
+            <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/">Leetcode-Search in Rotated Sorted Array</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/">Leetcode--Populating Next Right Pointers in Each Node</a>
+            <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/">Leetcode-Best Time to Buy and Sell Stock</a>
           </li>
         
           <li>
-            <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
+            <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/">Leetcode-Binary Tree Vertical Order traversal</a>
           </li>
         
       </ul>
@@ -261,7 +460,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Nan Xia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

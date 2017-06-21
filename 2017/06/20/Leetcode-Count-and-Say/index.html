@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Leetcode--Minimum Size Subarray Sum | Pumpkin</title>
+  <title>Leetcode-Count and Say | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829public String countAndSay(int n) &amp;#123;    if (n &amp;lt;= 0) &amp;#123;        return &amp;quot;&amp;quot;;    &amp;#125;    String str = &amp;quot;1&amp;quot;;    int i = 1;">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode--Minimum Size Subarray Sum">
-<meta property="og:url" content="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/index.html">
+<meta property="og:title" content="Leetcode-Count and Say">
+<meta property="og:url" content="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
-<meta property="og:updated_time" content="2017-06-18T21:24:15.000Z">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829public String countAndSay(int n) &amp;#123;    if (n &amp;lt;= 0) &amp;#123;        return &amp;quot;&amp;quot;;    &amp;#125;    String str = &amp;quot;1&amp;quot;;    int i = 1;">
+<meta property="og:updated_time" content="2017-06-20T19:40:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode--Minimum Size Subarray Sum">
-<meta name="twitter:description" content="https://leetcode.com/problems/minimum-size-subarray-sum/#/description123456789101112131415 public int minSubArrayLen (int s, int[] nums) &amp;#123;	if (nums == null || nums.length == 0) &amp;#123;		return 0;">
+<meta name="twitter:title" content="Leetcode-Count and Say">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829public String countAndSay(int n) &amp;#123;    if (n &amp;lt;= 0) &amp;#123;        return &amp;quot;&amp;quot;;    &amp;#125;    String str = &amp;quot;1&amp;quot;;    int i = 1;">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Leetcode-Minimum-Size-Subarray-Sum" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-Count-and-Say" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" class="article-date">
-  <time datetime="2017-06-18T20:58:12.000Z" itemprop="datePublished">2017-06-18</time>
+    <a href="/2017/06/20/Leetcode-Count-and-Say/" class="article-date">
+  <time datetime="2017-06-20T19:34:25.000Z" itemprop="datePublished">2017-06-20</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode--Minimum Size Subarray Sum
+      Leetcode-Count and Say
     </h1>
   
 
@@ -90,13 +90,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/minimum-size-subarray-sum/#/description" target="_blank" rel="external">https://leetcode.com/problems/minimum-size-subarray-sum/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int minSubArrayLen (int s, int[] nums) &#123;</div><div class="line">	if (nums == null || nums.length == 0) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;</div><div class="line">	int i = 0, j = 0, sum = 0, min = Integer.MAX_VALUE;</div><div class="line">	for (; i &lt; nums.length; i++) &#123;</div><div class="line">		sum += nums[i];</div><div class="line">		while (sum &gt;= s) &#123;</div><div class="line">			min = Math.min (min, i - j + 1);</div><div class="line">			sum -= nums[j++];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return min == Integer.MAX_VALUE? 0 : min;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Rectangle in matrix? </p>
-
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">public String countAndSay(int n) &#123;</div><div class="line">    if (n &lt;= 0) &#123;</div><div class="line">        return &quot;&quot;;</div><div class="line">    &#125;</div><div class="line">    String str = &quot;1&quot;;</div><div class="line">    int i = 1;</div><div class="line">    while (i &lt; n) &#123;</div><div class="line">        char[] temp = str.toCharArray();</div><div class="line">        int cnt = 0;</div><div class="line">        StringBuilder sb = new StringBuilder();</div><div class="line">        char prev = temp[0];</div><div class="line">        for (int k = 0; k &lt; temp.length; k++) &#123;</div><div class="line">            if (prev == temp[k]) &#123;</div><div class="line">                cnt++;</div><div class="line">            &#125; else &#123;</div><div class="line">                sb.append(cnt);</div><div class="line">                sb.append(prev);</div><div class="line">                cnt = 1;</div><div class="line">            &#125;</div><div class="line">            prev = temp[k];</div><div class="line">        &#125;</div><div class="line">        sb.append(cnt);</div><div class="line">        sb.append(prev);</div><div class="line"></div><div class="line">        i++;</div><div class="line">        str = sb.toString();</div><div class="line">    &#125;</div><div class="line">    return str;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/18/Leetcode-Minimum-Size-Subarray-Sum/" data-id="cj46dmpfw000f71vzsgu4ff0g" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj46dmpgj000r71vzkqej4fmj" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -107,19 +105,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
-          Leetcode--Intersection of two Arrayas
+          Leetcode-Sparse Matrix Multiplication
         
       </div>
     </a>
   
   
-    <a href="/2017/06/18/Leetcode-Decode-Ways/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Leetcode--Decode Ways</div>
+      <div class="article-nav-title">Leetcode-Search in Rotated Sorted Array</div>
     </a>
   
 </nav>

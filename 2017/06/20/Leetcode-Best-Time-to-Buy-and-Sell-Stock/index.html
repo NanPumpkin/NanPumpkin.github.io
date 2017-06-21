@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leetcode-Best Time to Buy and Sell Stock | Pumpkin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Best Time to Buy and Sell Stock I1234567891011121314public int maxProfit(int[] prices) &amp;#123;    if (prices.length == 0) &amp;#123;        return 0;    &amp;#125;    int min = Integer.MAX_VALUE;    int max =">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode-Best Time to Buy and Sell Stock">
+<meta property="og:url" content="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/index.html">
+<meta property="og:site_name" content="Pumpkin">
+<meta property="og:description" content="Best Time to Buy and Sell Stock I1234567891011121314public int maxProfit(int[] prices) &amp;#123;    if (prices.length == 0) &amp;#123;        return 0;    &amp;#125;    int min = Integer.MAX_VALUE;    int max =">
+<meta property="og:updated_time" content="2017-06-21T02:26:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode-Best Time to Buy and Sell Stock">
+<meta name="twitter:description" content="Best Time to Buy and Sell Stock I1234567891011121314public int maxProfit(int[] prices) &amp;#123;    if (prices.length == 0) &amp;#123;        return 0;    &amp;#125;    int min = Integer.MAX_VALUE;    int max =">
+  
+    <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Pumpkin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Start from Zero</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode-Best-Time-to-Buy-and-Sell-Stock" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" class="article-date">
+  <time datetime="2017-06-20T17:21:55.000Z" itemprop="datePublished">2017-06-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Leetcode-Best Time to Buy and Sell Stock
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Best Time to Buy and Sell Stock I<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices.length == 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int min = Integer.MAX_VALUE;</div><div class="line">    int max = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        min = Math.min(prices[i], min);</div><div class="line">        if (prices[i] &gt; min) &#123;</div><div class="line">            max = Math.max(prices[i] - min, max);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return max;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Best Time to Buy and Sell Stock II<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices==null || prices.length == 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int max = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        if (i &gt; 0 &amp;&amp; prices[i] &gt; prices[i - 1]) &#123;</div><div class="line">            max += prices[i] - prices[i - 1];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return max;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Best Time to Buy and Sell Stock III<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices == null || prices.length &lt;= 1) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int min = prices[0];</div><div class="line">    int max = prices[prices.length - 1];</div><div class="line">    int[] left = new int[prices.length];</div><div class="line">    for (int i = 1; i &lt; left.length; i++) &#123;</div><div class="line">        min = Math.min (min, prices[i]);</div><div class="line">        left[i] = Math.max (left[i - 1], prices[i] - min);</div><div class="line">    &#125;</div><div class="line">    int[] right = new int[prices.length];</div><div class="line">    for (int i = right.length - 2; i &gt;= 0; i--) &#123;</div><div class="line">        max = Math.max (max, prices[i]);</div><div class="line">        right[i] = Math.max(right[i + 1], max - prices[i]);</div><div class="line">    &#125;</div><div class="line">    int profit = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        profit = Math.max (left[i] + right[i], profit);</div><div class="line">    &#125;</div><div class="line">    return profit;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>References :<a href="http://www.programcreek.com/2014/02/leetcode-best-time-to-buy-and-sell-stock-iii-java/" target="_blank" rel="external">http://www.programcreek.com/2014/02/leetcode-best-time-to-buy-and-sell-stock-iii-java/</a><br>Best Time to Buy and Sell Stock IV</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj46dmpfm000a71vzgms60vu5" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Leetcode-Search in Rotated Sorted Array
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Leetcode-Binary Tree Vertical Order traversal</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/">Leetcode-Search in Rotated Sorted Array</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/">Leetcode-Best Time to Buy and Sell Stock</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/">Leetcode-Binary Tree Vertical Order traversal</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Nan Xia<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

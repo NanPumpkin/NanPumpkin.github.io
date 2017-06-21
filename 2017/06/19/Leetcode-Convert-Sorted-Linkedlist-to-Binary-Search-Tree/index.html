@@ -5,13 +5,17 @@
   
   <title>Leetcode--Convert Sorted Linkedlist to Binary Search Tree | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise12345678910111213141516171819202122 public TreeNode sortedListToBST(ListNode head) &amp;#123;	if (head == null) &amp;#">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode--Convert Sorted Linkedlist to Binary Search Tree">
 <meta property="og:url" content="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:updated_time" content="2017-06-19T18:23:35.000Z">
+<meta property="og:description" content="https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise12345678910111213141516171819202122 public TreeNode sortedListToBST(ListNode head) &amp;#123;	if (head == null) &amp;#">
+<meta property="og:updated_time" content="2017-06-20T16:37:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode--Convert Sorted Linkedlist to Binary Search Tree">
+<meta name="twitter:description" content="https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise12345678910111213141516171819202122 public TreeNode sortedListToBST(ListNode head) &amp;#123;	if (head == null) &amp;#">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -53,9 +57,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -86,13 +90,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><a href="https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise" target="_blank" rel="external">https://discuss.leetcode.com/topic/35997/share-my-java-solution-1ms-very-short-and-concise</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public TreeNode sortedListToBST(ListNode head) &#123;</div><div class="line">	if (head == null) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	return toBST(head, null);</div><div class="line">&#125;</div><div class="line">public TreeNode toBST(ListNode head, ListNode tail) &#123;</div><div class="line">	ListNode slow = head;</div><div class="line">	ListNode fast = head;</div><div class="line">	if (head == tail) &#123;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	while (fast != tail &amp;&amp; fast.next != tail) &#123;</div><div class="line">		fast = fast.next.next;</div><div class="line">		slow = slow.next;</div><div class="line">	&#125;</div><div class="line">	TreeNode thead = new TreeNode (slow.val);</div><div class="line">	thead.left = toBST(head, slow);</div><div class="line">	thead.right = toBST(slow.next, tail);</div><div class="line">	return thead;</div><div class="line">&#125;</div></pre></td></tr></table></figure> </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj44j31u00005s7t5k9xr0uxm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" data-id="cj46dmpf6000471vzf5lfjnd6" class="article-share-link">Partager</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
     </footer>
   </div>
   
@@ -100,7 +107,7 @@
 <nav id="article-nav">
   
     <a href="/2017/06/19/Leetcode-Sort-Colors/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           Leetcode-Sort Colors
@@ -110,7 +117,7 @@
   
   
     <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">Leetcode--Convert Sorted Array To Binary Search Tree</div>
     </a>
   
@@ -128,7 +135,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -138,7 +145,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
     </div>
@@ -147,7 +154,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -157,28 +164,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Sort-Colors/">Leetcode-Sort Colors</a>
+            <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</a>
+            <a href="/2017/06/20/Leetcode-Count-and-Say/">Leetcode-Count and Say</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Convert-Sorted-Array-To-Binary-Search-Tree/">Leetcode--Convert Sorted Array To Binary Search Tree</a>
+            <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/">Leetcode-Search in Rotated Sorted Array</a>
           </li>
         
           <li>
-            <a href="/2017/06/19/Leetcode-Populating-Next-Right-Pointers-in-Each-Node/">Leetcode--Populating Next Right Pointers in Each Node</a>
+            <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/">Leetcode-Best Time to Buy and Sell Stock</a>
           </li>
         
           <li>
-            <a href="/2017/06/18/Leetcode-Intersection-of-two-Arrayas/">Leetcode--Intersection of two Arrayas</a>
+            <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/">Leetcode-Binary Tree Vertical Order traversal</a>
           </li>
         
       </ul>
@@ -194,7 +201,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Nan Xia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
