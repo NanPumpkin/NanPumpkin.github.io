@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Leetcode-Sort Colors | Pumpkin</title>
+  <title>Leetcode-First Bad Version | Pumpkin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://leetcode.com/problems/sort-colors/#/description123456789101112131415 public void sortColors(int[] nums) &amp;#123;	int i = 0;	int j = nums.length - 1;	for (int k = 0; k &amp;lt;= j; k++) &amp;#123;		while">
+  <meta name="description" content="https://leetcode.com/problems/first-bad-version/#/descriptionEasiest Way: O(n)Binary Search – O(logn)Because it is sorted.12345678910111213 public int firstBadVersion (int n) &amp;#123;	int start = 1, end">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode-Sort Colors">
-<meta property="og:url" content="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/index.html">
+<meta property="og:title" content="Leetcode-First Bad Version">
+<meta property="og:url" content="http://yoursite.com/2017/06/21/Leetcode-First-Bad-Version/index.html">
 <meta property="og:site_name" content="Pumpkin">
-<meta property="og:description" content="https://leetcode.com/problems/sort-colors/#/description123456789101112131415 public void sortColors(int[] nums) &amp;#123;	int i = 0;	int j = nums.length - 1;	for (int k = 0; k &amp;lt;= j; k++) &amp;#123;		while">
-<meta property="og:updated_time" content="2017-06-19T19:22:40.000Z">
+<meta property="og:description" content="https://leetcode.com/problems/first-bad-version/#/descriptionEasiest Way: O(n)Binary Search – O(logn)Because it is sorted.12345678910111213 public int firstBadVersion (int n) &amp;#123;	int start = 1, end">
+<meta property="og:updated_time" content="2017-06-21T21:46:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode-Sort Colors">
-<meta name="twitter:description" content="https://leetcode.com/problems/sort-colors/#/description123456789101112131415 public void sortColors(int[] nums) &amp;#123;	int i = 0;	int j = nums.length - 1;	for (int k = 0; k &amp;lt;= j; k++) &amp;#123;		while">
+<meta name="twitter:title" content="Leetcode-First Bad Version">
+<meta name="twitter:description" content="https://leetcode.com/problems/first-bad-version/#/descriptionEasiest Way: O(n)Binary Search – O(logn)Because it is sorted.12345678910111213 public int firstBadVersion (int n) &amp;#123;	int start = 1, end">
   
     <link rel="alternate" href="/atom.xml" title="Pumpkin" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Leetcode-Sort-Colors" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-First-Bad-Version" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/19/Leetcode-Sort-Colors/" class="article-date">
-  <time datetime="2017-06-19T19:11:21.000Z" itemprop="datePublished">2017-06-19</time>
+    <a href="/2017/06/21/Leetcode-First-Bad-Version/" class="article-date">
+  <time datetime="2017-06-21T21:38:36.000Z" itemprop="datePublished">2017-06-21</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode-Sort Colors
+      Leetcode-First Bad Version
     </h1>
   
 
@@ -90,12 +90,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/sort-colors/#/description" target="_blank" rel="external">https://leetcode.com/problems/sort-colors/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void sortColors(int[] nums) &#123;</div><div class="line">	int i = 0;</div><div class="line">	int j = nums.length - 1;</div><div class="line">	for (int k = 0; k &lt;= j; k++) &#123;</div><div class="line">		while (nums[k] == 2 &amp;&amp; k &lt; j) &#123;</div><div class="line">			swap(nums, k, j);</div><div class="line">			j--;</div><div class="line">		&#125;</div><div class="line">		while (nums[k] == 0 &amp;&amp; k &gt; i) &#123;</div><div class="line">			swap (nums, i, k);</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p><a href="https://leetcode.com/problems/first-bad-version/#/description" target="_blank" rel="external">https://leetcode.com/problems/first-bad-version/#/description</a><br>Easiest Way: O(n)<br>Binary Search – O(logn)<br>Because it is sorted.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int firstBadVersion (int n) &#123;</div><div class="line">	int start = 1, end = n;</div><div class="line">	while (start &lt; end) &#123;	</div><div class="line">		int mid = start + (end - start) / 2;</div><div class="line">		if (!isBadVersion(mid)) &#123; </div><div class="line">			start = mid + 1;</div><div class="line">		&#125; else &#123; </div><div class="line">			end = mid;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return start;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj4egnplf0013nkt5hgb2nla4" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-First-Bad-Version/" data-id="cj4egnpkk000inkt571u8zw2i" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -106,19 +106,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/21/Leetcode-Min-Stack/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
-          Leetcode-Binary Tree Vertical Order traversal
+          Leetcode-Min Stack
         
       </div>
     </a>
   
   
-    <a href="/2017/06/19/Leetcode-Convert-Sorted-Linkedlist-to-Binary-Search-Tree/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/21/Leetcode-Flatten-Binary-Tree-To-LinkedList”/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Leetcode--Convert Sorted Linkedlist to Binary Search Tree</div>
+      <div class="article-nav-title">Leetcode-Flatten Binary Tree To LinkedList”</div>
     </a>
   
 </nav>

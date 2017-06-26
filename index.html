@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,166 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Leetcode-Min-Stack" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Min-Stack/" class="article-date">
+  <time datetime="2017-06-21T21:47:43.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Min-Stack/">Leetcode-Min Stack</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/min-stack/#/description" target="_blank" rel="external">https://leetcode.com/problems/min-stack/#/description</a><br>Min Stack<br>public class MinStack {</p>
+<p>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Min-Stack/" data-id="cj4egnpl9000ynkt5pmzh78nr" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-First-Bad-Version" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-First-Bad-Version/" class="article-date">
+  <time datetime="2017-06-21T21:38:36.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-First-Bad-Version/">Leetcode-First Bad Version</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/first-bad-version/#/description" target="_blank" rel="external">https://leetcode.com/problems/first-bad-version/#/description</a><br>Easiest Way: O(n)<br>Binary Search – O(logn)<br>Because it is sorted.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int firstBadVersion (int n) &#123;</div><div class="line">	int start = 1, end = n;</div><div class="line">	while (start &lt; end) &#123;	</div><div class="line">		int mid = start + (end - start) / 2;</div><div class="line">		if (!isBadVersion(mid)) &#123; </div><div class="line">			start = mid + 1;</div><div class="line">		&#125; else &#123; </div><div class="line">			end = mid;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return start;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-First-Bad-Version/" data-id="cj4egnpkk000inkt571u8zw2i" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Flatten-Binary-Tree-To-LinkedList”" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Flatten-Binary-Tree-To-LinkedList”/" class="article-date">
+  <time datetime="2017-06-21T20:54:03.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Flatten-Binary-Tree-To-LinkedList”/">Leetcode-Flatten Binary Tree To LinkedList”</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/#/description" target="_blank" rel="external">https://leetcode.com/problems/flatten-binary-tree-to-linked-list/#/description</a><br>Flatten Binary tree to LinkedList<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">public void flatten (TreeNode root) &#123;</div><div class="line">	if (root == null) &#123; </div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	TreeNode left = root.left; </div><div class="line">	TreeNode right = root.right;</div><div class="line">	root.left = null;</div><div class="line">	flatten(left);</div><div class="line">	flatten(right);</div><div class="line">	root.right = left;</div><div class="line">	TreeNode cur = root;</div><div class="line">	while (cur.right != null) &#123; </div><div class="line">		cur = cur.right;</div><div class="line">	&#125;</div><div class="line">	cur.right = right;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//iterative version</div><div class="line">public void flatten (TreeNode root) &#123;</div><div class="line">	if (root == null) &#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</div><div class="line">	if (root.right != null) &#123; </div><div class="line">		stack.push (root.right);</div><div class="line">	&#125;</div><div class="line">	if (root.left != null) &#123; </div><div class="line">		stack.push (root.left);</div><div class="line">	&#125;</div><div class="line">	TreeNode cur = root;</div><div class="line">	while (!stack.isEmpty()) &#123; </div><div class="line">		TreeNode node = stack.pop();</div><div class="line">		if (node.right != null) &#123;	</div><div class="line">			stack.push (node.right);</div><div class="line">		&#125;</div><div class="line">		if (node.left != null) &#123;	</div><div class="line">			stack.push (node.left);</div><div class="line">		&#125;</div><div class="line">		cur.right = node;</div><div class="line">		cur.left = null;</div><div class="line">		cur = cur.right;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Flatten-Binary-Tree-To-LinkedList”/" data-id="cj4egnpkt000onkt5djdqav5h" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Leetcode-Kth-Largest-Element-in-an-Array" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/Leetcode-Kth-Largest-Element-in-an-Array/" class="article-date">
+  <time datetime="2017-06-21T20:28:01.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/Leetcode-Kth-Largest-Element-in-an-Array/">Leetcode-Kth Largest Element in an Array</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Kth largest Element in an array<br>If I can change the array<br>Arrays.sort();</p>
+<p>If additional space allowed,<br>PriorityQueue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public int findKthLargest(int[] nums, int k) &#123;</div><div class="line">    PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();</div><div class="line">    for (int i : nums) &#123;</div><div class="line">        if (pq.size() &lt; k) &#123;</div><div class="line">            pq.offer(i);</div><div class="line">        &#125; else &#123;</div><div class="line">            if (i &gt; pq.peek()) &#123;</div><div class="line">                pq.poll();</div><div class="line">                pq.offer(i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return pq.peek();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Quick Select<br><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/#/solutions" target="_blank" rel="external">https://leetcode.com/problems/kth-largest-element-in-an-array/#/solutions</a><br>It is very similar with quick sort<br>if indexOfPivot == k, return A[k];<br>else if indexOfPivot &lt; k, check the left part to pivot<br>else if indexOfPivot &gt; k, check the right part to pivot<br>Time Complexity: n + n / 2 + n / 4 … + 1 = n + n - 1 – O(2n - 1) - O(n)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">public int findKthLargest(int[] nums, int k) &#123;</div><div class="line">	return findKthLargest (nums, 0, nums.length - 1, nums.length - k);</div><div class="line">&#125;</div><div class="line">public int findKthLargest(int[] nums, int start, int end, int k) &#123;</div><div class="line">	if (start &gt; end) return Integer.MAX_VALUE;</div><div class="line">	int pivot = nums[end];</div><div class="line">	int left = start; </div><div class="line">	for (int i = start; i &lt; end; i++) &#123;</div><div class="line">		if (nums[i] &lt;= pivot) &#123;</div><div class="line">			swap (nums, left++, i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	swap (nums, left, end);</div><div class="line">	if (left == k) &#123;</div><div class="line">		return nums[left];</div><div class="line">	&#125; else if (left &lt; k) &#123;</div><div class="line">		return findKthLargest(nums, left + 1, end, k);</div><div class="line">	&#125; else &#123;	</div><div class="line">		return findKthLargest(nums, start, left - 1, k);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">public void swap (int i, int j, int[] A) &#123;</div><div class="line">	A[i] ^= A[j];</div><div class="line">	A[j] ^= A[i];</div><div class="line">	A[i] ^= A[j];</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Kth-Largest-Element-in-an-Array/" data-id="cj4egnpkw000qnkt5iuj7nt3o" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Leetcode-Lowest-Common-Ancestor" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -93,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Lowest-Common-Ancestor/" data-id="cj47g3sut000neht51lce9s63" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Lowest-Common-Ancestor/" data-id="cj4egnpl3000unkt5ut09yb5r" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -133,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj47g3svg0011eht5mk3dinxc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Unique-Paths/" data-id="cj4egnplr001cnkt528swjxo9" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -172,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Longest-Palindrome-in-String/" data-id="cj47g3sus000leht5lqy4ynl3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Longest-Palindrome-in-String/" data-id="cj4egnpkz000snkt5dynmvt89" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -211,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" data-id="cj47g3su50004eht5xycsqr7k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/" data-id="cj4egnpjx000ankt5hhqk7sj7" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -250,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj47g3svd000xeht56xzgvnsl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/" data-id="cj4egnplj0017nkt5r219czk1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -288,166 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj47g3suj000deht5f0w87ejo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Search-in-Rotated-Sorted-Array" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" class="article-date">
-  <time datetime="2017-06-20T18:12:45.000Z" itemprop="datePublished">2017-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/">Leetcode-Search in Rotated Sorted Array</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public int search(int[] nums, int target) &#123;</div><div class="line">    if (nums == null || nums.length == 0) &#123;</div><div class="line">        return -1;</div><div class="line">    &#125;</div><div class="line">    int low = 0, high = nums.length - 1;</div><div class="line">    while (low &lt;= high) &#123;</div><div class="line">        int mid = low + (high - low) / 2;</div><div class="line">        if (target &lt; nums[mid]) &#123;</div><div class="line">            if (nums[mid] &lt; nums[high]) &#123;</div><div class="line">                high = mid - 1;</div><div class="line">            &#125; else &#123;</div><div class="line">                if (target &lt; nums[low]) &#123;</div><div class="line">                    low = mid + 1;</div><div class="line">                &#125; else &#123;</div><div class="line">                    high = mid - 1;</div><div class="line">                &#125;</div><div class="line">                </div><div class="line">            &#125;</div><div class="line">        &#125; else if (target &gt; nums[mid]) &#123;</div><div class="line">            if (nums[mid] &gt; nums[low]) &#123;</div><div class="line">                low = mid + 1;</div><div class="line">            &#125; else &#123;</div><div class="line">                </div><div class="line">                if (target &gt; nums[high]) &#123;</div><div class="line">                   high = mid - 1;</div><div class="line">                &#125; else &#123;</div><div class="line">                     low = mid + 1;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125; else &#123;</div><div class="line">            return mid;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    return -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Search in Rotated Sorted Array II<br><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/#/description" target="_blank" rel="external">https://leetcode.com/problems/search-in-rotated-sorted-array-ii/#/description</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Search-in-Rotated-Sorted-Array/" data-id="cj47g3sv3000teht54d5d54h1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Best-Time-to-Buy-and-Sell-Stock" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" class="article-date">
-  <time datetime="2017-06-20T17:21:55.000Z" itemprop="datePublished">2017-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/">Leetcode-Best Time to Buy and Sell Stock</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Best Time to Buy and Sell Stock I<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices.length == 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int min = Integer.MAX_VALUE;</div><div class="line">    int max = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        min = Math.min(prices[i], min);</div><div class="line">        if (prices[i] &gt; min) &#123;</div><div class="line">            max = Math.max(prices[i] - min, max);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return max;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Best Time to Buy and Sell Stock II<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices==null || prices.length == 0) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int max = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        if (i &gt; 0 &amp;&amp; prices[i] &gt; prices[i - 1]) &#123;</div><div class="line">            max += prices[i] - prices[i - 1];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return max;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Best Time to Buy and Sell Stock III<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public int maxProfit(int[] prices) &#123;</div><div class="line">    if (prices == null || prices.length &lt;= 1) &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    int min = prices[0];</div><div class="line">    int max = prices[prices.length - 1];</div><div class="line">    int[] left = new int[prices.length];</div><div class="line">    for (int i = 1; i &lt; left.length; i++) &#123;</div><div class="line">        min = Math.min (min, prices[i]);</div><div class="line">        left[i] = Math.max (left[i - 1], prices[i] - min);</div><div class="line">    &#125;</div><div class="line">    int[] right = new int[prices.length];</div><div class="line">    for (int i = right.length - 2; i &gt;= 0; i--) &#123;</div><div class="line">        max = Math.max (max, prices[i]);</div><div class="line">        right[i] = Math.max(right[i + 1], max - prices[i]);</div><div class="line">    &#125;</div><div class="line">    int profit = 0;</div><div class="line">    for (int i = 0; i &lt; prices.length; i++) &#123;</div><div class="line">        profit = Math.max (left[i] + right[i], profit);</div><div class="line">    &#125;</div><div class="line">    return profit;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>References :<a href="http://www.programcreek.com/2014/02/leetcode-best-time-to-buy-and-sell-stock-iii-java/" target="_blank" rel="external">http://www.programcreek.com/2014/02/leetcode-best-time-to-buy-and-sell-stock-iii-java/</a><br>Best Time to Buy and Sell Stock IV</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Best-Time-to-Buy-and-Sell-Stock/" data-id="cj47g3su90005eht53y0p47lz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Binary-Tree-Vertical-Order-traversal" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" class="article-date">
-  <time datetime="2017-06-20T16:44:19.000Z" itemprop="datePublished">2017-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/">Leetcode-Binary Tree Vertical Order traversal</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.programcreek.com/2014/04/leetcode-binary-tree-vertical-order-traversal-java/" target="_blank" rel="external">http://www.programcreek.com/2014/04/leetcode-binary-tree-vertical-order-traversal-java/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public List&lt;List&lt;Integer&gt;&gt; verticalOrder(TreeNode root) &#123;</div><div class="line">	List&lt;List&lt;Integer&gt;&gt; rst = new ArrayList&lt;&gt;();</div><div class="line">	if (root == null) &#123;</div><div class="line">		return rst;</div><div class="line">	&#125;</div><div class="line">	HashMap&lt;Integer, List&lt;Integer&gt;&gt; map = new HashMap&lt;&gt;();</div><div class="line">	Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();</div><div class="line">	Queue&lt;Integer&gt; level = new LinkedList&lt;&gt;();</div><div class="line"></div><div class="line">	queue.offer(root);</div><div class="line">	level.offer(0);</div><div class="line">	int minLevel = 0;</div><div class="line">	int maxLevel = 0;</div><div class="line"></div><div class="line">	while(!queue.isEmpty()) &#123;</div><div class="line">		TreeNode node = queue.poll();</div><div class="line">		int l = level.poll();</div><div class="line"></div><div class="line">		minLevel = Math.min(l, minLevel);</div><div class="line">		maxLevel = Math.max(l, maxLevel);</div><div class="line"></div><div class="line">		if (map.containsKey(l)) &#123;</div><div class="line">			map.get(l).add(node.val);</div><div class="line">		&#125; else &#123;</div><div class="line">			List&lt;Integer&gt; temp = new ArrayList&lt;&gt;();</div><div class="line">			temp.add(node.val);</div><div class="line">			map.put(l, temp);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		if (node.left != null) &#123;</div><div class="line">			queue.offer(node.left);</div><div class="line">			level.offer(l - 1);</div><div class="line">		&#125;</div><div class="line">		if (node.right != null) &#123;</div><div class="line">			queue.offer(node.right);</div><div class="line">			level.offer(l + 1);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for (int i = minLevel; i &lt;= maxLevel; i++) &#123;</div><div class="line">		if (map.containsKey(i)) &#123;</div><div class="line">			rst.add(map.get(i));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return rst;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Binary-Tree-Vertical-Order-traversal/" data-id="cj47g3suc0008eht5dd0c2ylc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-Sort-Colors" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/19/Leetcode-Sort-Colors/" class="article-date">
-  <time datetime="2017-06-19T19:11:21.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/Leetcode-Sort-Colors/">Leetcode-Sort Colors</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/sort-colors/#/description" target="_blank" rel="external">https://leetcode.com/problems/sort-colors/#/description</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">public void sortColors(int[] nums) &#123;</div><div class="line">	int i = 0;</div><div class="line">	int j = nums.length - 1;</div><div class="line">	for (int k = 0; k &lt;= j; k++) &#123;</div><div class="line">		while (nums[k] == 2 &amp;&amp; k &lt; j) &#123;</div><div class="line">			swap(nums, k, j);</div><div class="line">			j--;</div><div class="line">		&#125;</div><div class="line">		while (nums[k] == 0 &amp;&amp; k &gt; i) &#123;</div><div class="line">			swap (nums, i, k);</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/19/Leetcode-Sort-Colors/" data-id="cj47g3sv7000veht5wja33fdp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/20/Leetcode-Count-and-Say/" data-id="cj4egnpki000hnkt5rx1q81dm" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -473,7 +474,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
     </div>
@@ -483,7 +484,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a>
     </div>
@@ -502,28 +503,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
+            <a href="/2017/06/21/Leetcode-Min-Stack/">Leetcode-Min Stack</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-First-Bad-Version/">Leetcode-First Bad Version</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Flatten-Binary-Tree-To-LinkedList”/">Leetcode-Flatten Binary Tree To LinkedList”</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/21/Leetcode-Kth-Largest-Element-in-an-Array/">Leetcode-Kth Largest Element in an Array</a>
+          </li>
+        
+          <li>
             <a href="/2017/06/21/Leetcode-Lowest-Common-Ancestor/">Leetcode-Lowest Common Ancestor</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/21/Leetcode-Unique-Paths/">Leetcode-Unique Paths</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/21/Leetcode-Longest-Palindrome-in-String/">Leetcode-Longest Palindrome in String</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/21/Leetcode-Add-and-Search-Word-Data-Structure-Design/">Leetcode-Add and Search Word-Data Structure Design</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Leetcode-Sparse-Matrix-Multiplication/">Leetcode-Sparse Matrix Multiplication</a>
           </li>
         
       </ul>
@@ -539,7 +540,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Nan Xia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
